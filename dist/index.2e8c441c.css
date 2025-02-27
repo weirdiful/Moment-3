@@ -1,0 +1,79 @@
+:root {
+  --bg-color: #1b2021;
+  --text-color: #ffd9da;
+  --primary-color: #ea638c;
+  --secondary-color: #89023e;
+  --accent-color: #30343f;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #ffd9da;
+    --text-color: #1b2021;
+    --primary-color: #89023e;
+    --secondary-color: #ea638c;
+    --accent-color: #30343f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  font: 100% courier new, courier, monospace;
+}
+
+.header {
+  background-color: #89023e;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100vw;
+  padding: 50px;
+  display: flex;
+  position: relative;
+}
+
+.header a {
+  color: #ffd9da;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.header div {
+  gap: 20px;
+  display: flex;
+}
+
+.photos {
+  display: flex;
+}
+
+.photos column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+.photos img {
+  width: 300px;
+  height: auto;
+}
+
+.sass-text {
+  padding: 20px;
+}
+
+.sass-text h2 {
+  font-size: 1.4rem;
+  line-height: 1.2rem;
+}
+
+.sass-text p {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+/*# sourceMappingURL=index.2e8c441c.css.map */

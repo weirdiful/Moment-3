@@ -211,4 +211,21 @@ html, body {
         display: flex;
         flex-direction: column;
     }
+    .photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        gap: 10px;
+    }
+
+    .photos column {
+        flex: 100%;
+        padding: 0;
+    }
+
+    .photos img {
+        width: 90%; 
+        max-width: 400px; 
+        height: auto;
+    }
 }

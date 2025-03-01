@@ -197,5 +197,23 @@ html, body {
     flex-direction: column;
     display: flex;
   }
+
+  .photos {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+  }
+
+  .photos column {
+    flex: 100%;
+    padding: 0;
+  }
+
+  .photos img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+  }
 }
 /*# sourceMappingURL=index.2e8c441c.css.map */

@@ -64,7 +64,7 @@ html, body {
     position: fixed;
     z-index: 1;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
@@ -74,7 +74,8 @@ html, body {
         text-decoration: none;
         font-size: 25px;
         color: var(--text-color);
-        display: block;
+        display: flex;
+        flex-direction: column;
         transition: 0.3s;
     }
     .closebtn {
@@ -86,13 +87,19 @@ html, body {
     }
   }
   
-  
-  
   .sidenav a:hover {
     color: #f1f1f1;
   }
   
-  
+  .hamburger-menu {
+    cursor: pointer;
+  }
+
+  .icon {width: 35px;
+    height: 5px;
+    background-color: var(--text-color);
+    margin: 6px 0;
+}
   
 
 .buttons {
@@ -156,3 +163,15 @@ html, body {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+
+
+  @media (max-width: 768px) {
+
+    .header-links {
+        display: none;
+    }
+
+
+
+}

@@ -20,10 +20,12 @@
     text-decoration: none;
     font: 100% base.$font-stack;
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin: 5px;
+    outline: none;
     color: var(--text-color);
-
+    box-shadow: 0 5px var(--accent-color);
+    transition: background-color 0.3s, transform 0.1s;
 }
   
 html, body {
@@ -69,13 +71,15 @@ html, body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    a{
-        padding: 8px 8px 8px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a {
         text-decoration: none;
         font-size: 25px;
         color: var(--text-color);
-        display: flex;
-        flex-direction: column;
+        display: block;
+        padding: 10px 20px;
         transition: 0.3s;
     }
     .closebtn {
@@ -86,19 +90,21 @@ html, body {
         margin-left: 50px;
     }
   }
+
   
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: var(--primary-color);
   }
   
   .hamburger-menu {
     cursor: pointer;
   }
 
-  .icon {width: 35px;
+  .icon {
+    width: 35px;
     height: 5px;
     background-color: var(--text-color);
-    margin: 6px 0;
+    margin: 4px 0;
 }
   
 
@@ -115,7 +121,32 @@ html, body {
 .button1:hover {
     background-color: var(--text-color);
     color: var(--secondary-color);
+   
 }
+.button1:active {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    box-shadow: 0 5px var(--accent-color);
+    transform: translateY(4px);
+}
+
+.button2 {
+    @extend .button1;
+    background-color: var(--secondary-color);
+}
+
+.button2:hover {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+}
+
+.button1:active {
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    box-shadow: 0 5px var(--accent-color);
+    transform: translateY(4px);
+}
+
 
 .footer {
     display: flex;
@@ -166,12 +197,18 @@ html, body {
 
 
 
-  @media (max-width: 768px) {
-
-    .header-links {
+  @media (min-width: 769px) {
+    .hamburger-menu {
         display: none;
     }
+}
 
-
-
+@media (max-width: 768px) {
+    #header-links {
+        display: none;
+    }
+    .hamburger-menu {
+        display: flex;
+        flex-direction: column;
+    }
 }

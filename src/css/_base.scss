@@ -9,30 +9,27 @@ $font-stack: 'courier new', courier, monospace;
 // $grey:#30343F;
 // $dark-grey: #1B2021;
 
-:root {
+
+
+$dark-mode: true;
+
+@mixin theme {
+  @if $dark-mode {
     --bg-color: #1B2021;
     --text-color:#FFD9DA;
     --primary-color:#EA638C;
     --secondary-color:#89023E;
     --accent-color:#30343F;
-}
-
-
-@mixin theme($bg-color, $text-color, $primary-color, $secondary-color, $accent-color) {
-    --bg-color: #{$bg-color};
-    --text-color: #{$text-color};
-    --primary-color: #{$primary-color};
-    --secondary-color: #{$secondary-color};
-    --accent-color: #{$accent-color};
   }
-  
-  :root {
-    @include theme(#1B2021, #FFD9DA, #EA638C, #89023E, #30343F);
-  }
-  
-  @media (prefers-color-scheme: light) {
-    :root {
-      @include theme(#FFD9DA, #1B2021, #89023E, #EA638C, #30343F);
+    @else {
+    --bg-color: #FFD9DA;
+    --text-color: #1B2021;
+    --primary-color:#89023E;
+    --secondary-color:#EA638C;
+    --accent-color:#30343F;
     }
   }
   
+  :root {
+    @include theme;
+}

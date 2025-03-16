@@ -33,3 +33,24 @@ $dark-mode: true;
   :root {
     @include theme;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1B2021;
+    --text-color: #FFD9DA;
+    --primary-color: #EA638C;
+    --secondary-color: #89023E;
+    --accent-color: #30343F;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFD9DA;
+    --text-color: #1B2021;
+    --primary-color: #89023E;
+    --secondary-color: #EA638C;
+    --accent-color: #30343F;
+  }
+}
+
